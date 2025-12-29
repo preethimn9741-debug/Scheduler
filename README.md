@@ -51,4 +51,8 @@ Job execution status is printed to the console
 
 Detailed logs are written to:
 
+scheduler.log
+
+
+
 
