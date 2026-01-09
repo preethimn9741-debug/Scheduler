@@ -4,14 +4,13 @@ import subprocess
 import logging
 import os
 
-# ---------- Logging setup ----------
+
 logging.basicConfig(
     filename="scheduler.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# ---------- Load jobs ----------
 with open("jobs.json", "r") as f:
     jobs = json.load(f)
 
@@ -21,7 +20,6 @@ for job in jobs:
 
 print("Scheduler started... Press CTRL+C to stop")
 
-# ---------- Scheduler loop ----------
 try:
     while True:
         current_time = time.time()
@@ -52,3 +50,4 @@ try:
 except KeyboardInterrupt:
     print("\nScheduler stopped gracefully")
     logging.info("Scheduler stopped by user")
+
