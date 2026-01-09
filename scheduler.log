@@ -366,4 +366,3 @@ except KeyboardInterrupt:
 2025-12-19 14:36:59,049 - INFO - Scheduler stopped by user
 2025-12-19 14:49:00,544 - INFO - Running job: Job 1
 2025-12-19 14:49:00,609 - INFO - Job 1 completed successfully
-2025-12-19 14:49:00,609 - INFO - Running job: Job 2
