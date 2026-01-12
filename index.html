@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Scheduler Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            background: white;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .interval {
+            color: gray;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Job Scheduler Dashboard</h1>
+
+    <button onclick="loadJobs()">Load Jobs</button>
+
+    <ul id="jobs"></ul>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
