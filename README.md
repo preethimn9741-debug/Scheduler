@@ -1,58 +1,97 @@
+# Python Job Scheduler Application
 
-# Job Scheduler
+This project is a **Python-based Job Scheduler** that executes background jobs at defined intervals.  
+It has been extended into a **robust full-stack application** using a web interface, database-backed CRUD operations, and automated testing.
 
-## Project Description
-This project is a **simple job scheduler** written in Python.
-It reads job details from a JSON file and executes the specified Python scripts at fixed time intervals.
-All job execution details are logged to a log file.
+## Features
 
----
+- Background job scheduling using Python
+- Executes independent job scripts at fixed intervals
+- Flask-based web application to view and manage jobs
+- CRUD backend with SQLite database
+- Interactive frontend using HTML and JavaScript
+- Persistent job storage
+- Logging for job execution and failures
+- Automated test support using pytest
 
-## Files
-- `scheduler.py` – Main scheduler script
-- `jobs.json` – Job configuration file
-- `job1.py` – Example job script
-- `scheduler.log` – Log file generated during execution
-- `README.md` – Project documentation
+## Technologies Used
 
----
+- **Python**
+- **Flask** – Web framework
+- **SQLite** – Database
+- **Subprocess** – Job execution
+- **Logging** – Scheduler logs
+- **HTML / JavaScript** – Frontend UI
+- **Pytest** – Testing
 
-## How the Scheduler Works
-1. Loads job definitions from `jobs.json`
-2. Each job contains:
-   - Job name
-   - Python script to execute
-   - Time interval (in seconds)
-3. The scheduler continuously checks if a job is ready to run
-4. When the interval is reached:
-   - The job script is executed
-   - Success or failure is logged
-5. The scheduler runs until stopped manually
+  ## 📂 Project Structure
 
----
+scheduler/
 
-## Job Configuration
-Jobs are defined in `jobs.json`.
+│── scheduler.py # Scheduler engine
 
-Each job includes:
-- `name` – Job name
-- `script` – Python script to execute
-- `interval` – Execution interval in seconds
+│── app.py # Flask web application
 
----
+│── database.py # Database and CRUD operations
 
-## How to Run
+│── jobs.json # Initial job configuration
 
-python scheduler.py
+│── jobs.db # SQLite database
 
-## Output
+│── job1.py # Sample job
 
-Job execution status is printed to the console
+│── scheduler.log # Execution logs
 
-Detailed logs are written to:
+├── templates/
 
-scheduler.log
+│ └── index.html # Web UI
+
+├── static/
+
+│ └── script.js # JavaScript for UI interaction
+
+├── tests/
+
+│ └── test_scheduler.py # Test cases
+
+## Installation & Setup
+
+1. Navigate to the project directory
+
+   cd C:\scheduler
+
+2. Create and activate virtual environment
+
+   python -m venv venv
+   
+   venv\Scripts\activate
+
+3. Install dependencies
+
+   pip install flask pytest
+
+4. Start the Flask Web App
+
+   python app.py
+
+5. Running Test Cases
+
+   python -m pytest
+   
+## output 
+
+Scheduler started... Press CTRL+C to stop
+
+## terminal screnshort output 
+
+<img width="800" height="533" alt="image" src="https://github.com/user-attachments/assets/35f83122-d85c-4a29-a0da-9d5471413a82" />
+
+## Conclusion
+
+This project demonstrates a complete Python-based job scheduling system with real-time execution and monitoring. By integrating a Flask web interface, database-backed job management, and automated testing, the application reflects real-world backend development practices. The use of a VS Code–based workflow, logging, and error handling ensures reliability and maintainability. Overall, the project showcases practical skills in Python, web development, and system automation.
 
 
 
 
+
+  
